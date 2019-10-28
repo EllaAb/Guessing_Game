@@ -18,6 +18,7 @@ return (
     <h2>
         
         {props.feedback}
+        <br />
          {guessAgain}
     </h2>
     
@@ -27,8 +28,8 @@ return (
 
 const mapStateToProps=(state) => {
     return (
-        {guessCount:state.player.length},
-        {feedback:state.feedback}
+        {guesses:state.player.guesses},
+        {feedback:state.player.feedback}
       
 
     );
