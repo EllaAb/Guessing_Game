@@ -15,7 +15,7 @@ const GuessCount =(props) => {
 		
 		
 	  <h2>
-        You've made {props.GuessCount} {GuessNoun}!
+        You've made {props.guessedNumber.length} {GuessNoun}!
        </h2>
 	);
 	
@@ -23,7 +23,7 @@ const GuessCount =(props) => {
 }
 
 const mapStateToProps=(state) => {
-	return {guesses:state.player.length};
+	return {guessedNumber:state.player.guesses};
 };
 
 export default connect(mapStateToProps
