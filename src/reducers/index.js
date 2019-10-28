@@ -29,7 +29,10 @@ const playerReducer = (state= initialState, action) => {
   
   if (action.type === 'MAKE_GUESS'){
     let feedback, guess; 
-    guess = parseInt(action.guess, 100);
+    
+    guess= action.guess;
+  
+    console.log(guess);
     if (isNaN(guess)) {
       feedback ='Please enter a valid number';
 
